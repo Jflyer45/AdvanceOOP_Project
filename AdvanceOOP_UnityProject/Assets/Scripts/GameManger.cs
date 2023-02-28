@@ -15,4 +15,9 @@ public class GameManger : MonoBehaviour
     {
         
     }
+
+    public void OnPlayerDeath()
+    {
+
+    }
 }
