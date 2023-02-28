@@ -20,4 +20,9 @@ public class GameManger : MonoBehaviour
     {
 
     }
+    
+    public void SetUpObjectives(List<int> ids)
+    {
+
+    }
 }
