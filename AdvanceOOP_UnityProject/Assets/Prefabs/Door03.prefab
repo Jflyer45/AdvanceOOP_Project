@@ -26,14 +26,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636295296573928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4532270833822764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!33 &33233952325708148
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -129,6 +131,7 @@ Transform:
   m_LocalRotation: {x: -0.00024670362, y: -0.0002468523, z: -0.707105, w: 0.70710856}
   m_LocalPosition: {x: -0.04167287, y: -1.7000115, z: 0.0010000467}
   m_LocalScale: {x: 2.1500046, y: 1.7916688, z: 2.2000017}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4990454532025446}
   m_RootOrder: 0
@@ -152,6 +155,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -238,6 +242,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   customText: Door is Locked!
+  customTextKey: 
   keyID: 0
   useAnim: Door_Open
   backUseAnim: Door_Close
@@ -248,6 +253,7 @@ MonoBehaviour:
   knobAnim: 
   useSR: 0
   startingRotation: {x: 0, y: 0, z: 0}
+  doorStopSpeed: 10
   isOpened: 0
   toPlayerAngle: 0
   moveWithX: 0
