@@ -671,3 +671,118 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63fad3ff216a5b47bb9443eb853d6e3, type: 3}
+--- !u!1001 &1575063332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 142852, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_Name
+      value: Glass_Wine01
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.339
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -4.3297806e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -4.32978e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454394, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441104, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11441104, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: d112c50f356a7f44f8d9c051e5949b54, type: 3}
+--- !u!1 &1950470636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 142852, guid: d112c50f356a7f44f8d9c051e5949b54,
+    type: 3}
+  m_PrefabInstance: {fileID: 1575063332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1950470637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950470636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12c7adbd62e3b3439cf9b07fcd27b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Replacements:
+  - {fileID: 197598, guid: 3267a37c023469642a1a1a3b4503d096, type: 3}
+  - {fileID: 110566, guid: 932a363dc05d27d4199f35f81339be31, type: 3}
+  - {fileID: 120652, guid: 105c629545db7ac4a8053ce83bc802c2, type: 3}
+  BreakOnCollision: 1
+  SpeedRequiredToBreak: 0
+  CleanUpShards: 0
+  MinShardLife: 3
+  MaxShardLife: 6
+  Repair: 1
+  RepairTime: 6
+  replaceMaterialOnBreak: 0
+  ReplacementMaterial: {fileID: 2100000, guid: 2e39d8a8163aa3545a6d62bf3ea64dcf, type: 2}
+  ShardMassChangesWithScale: 1
+  CrackBeforeShattering: 0
+  PlaySound: 1
+  ShatterSoundClips: []
+  CrackSoundClips: []
+  Cracked: 0
+--- !u!54 &1950470644
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950470636}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

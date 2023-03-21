@@ -63,45 +63,45 @@ public class Breakable : MonoBehaviour {
 	[HideInInspector]
 	public bool Cracked = false;
 	//prevents instantiating too many replacements on Break().
-	private bool Broken = false;
+	protected bool Broken = false;
 
 	//holds the attached AudioSource Component.
-	private AudioSource AttachedAudioSource;
+	protected AudioSource AttachedAudioSource;
 
 	//holds the material of the original window, so that the shattered replacement can be the same material.
-	private Material OriginalMat;
+	protected Material OriginalMat;
 	//holds the material of the original lid/cork/accessory if one is present
-	private Material AccessoryMat;
-	
+	protected Material AccessoryMat;
+
 	//a place to store the renderers of all the incoming shards, to make the materials match.
-	private Renderer[] ShardsMats;
+	protected Renderer[] ShardsMats;
 
 	//A place to store the rigidbodies of the shards so you can...uh... do stuff to them.
-	private Rigidbody[] ShardsRigidbodies;
+	protected Rigidbody[] ShardsRigidbodies;
 
 	//This is a placeholder for the rigidbody, if one is attached to this object.
-	private Rigidbody ThisRigidbody;
+	protected Rigidbody ThisRigidbody;
 	//this bool is here to automatically handle behavior based on weather the attached rigidbody is kinematic or not.
-	private bool IsRigidbodyKinematic = false;
+	protected bool IsRigidbodyKinematic = false;
 	//these floats hold the velocity.magnitude of the rigidbody of this object and whatever object this object collides with.
-	
+
 	//these two variables are combined to create a threshold that must be reached before breaking can occur, if set to BreakOnCollision.
-	private float SpeedOfOther = 0;
-	private float SpeedOfSelf = 0;
-	
+	protected float SpeedOfOther = 0;
+	protected float SpeedOfSelf = 0;
+
 	//a place to store the original position and rotation of the object if it has a rigidbody, and may have moved. 
 	//this makes it so that when this object repairs, it goes to it's original position.
-	private Vector3 StartPosition;
-	private Vector3 StartRotation;
+	protected Vector3 StartPosition;
+	protected Vector3 StartRotation;
 
 	//To select which replacement to use at random, so it doesn't look the same every time it gets broken.
-	private int RandomReplacementNumber;
+	protected int RandomReplacementNumber;
 
 	//Used to select which of the available sounds to play.
-	private int SoundNumber;
+	protected int SoundNumber;
 
 	//used internally, and composed of MinShardLife and MaxShardLife.
-	private float ShardLifeTime;
+	protected float ShardLifeTime;
 
 
 //----------------------------------------------------------------------------------------------------
@@ -150,7 +150,7 @@ public class Breakable : MonoBehaviour {
 	// If the public variable "BreakOnCollision" (above) is set to 'true', then when this object comes 
 	// into contact with a gameobject which has a collider attached, then the 'Break()' function will be called on this object. Behold!
 
-	void OnCollisionEnter (Collision other){
+	protected void OnCollisionEnter (Collision other){
 
 		if (BreakOnCollision) {
 		
@@ -205,7 +205,7 @@ The following 'Break' coroutine contains most of the logic for this script
 	
 ------------------------------------------------------------------
 	 */
-	IEnumerator Break (){
+	protected IEnumerator Break (){
 
 //1.
 		if (Replacements.Length > 0) {
@@ -380,7 +380,7 @@ public	void RepairFunction (GameObject BrokenVersion){
 
 	//...And THIS function re-enables the physics of the glass shards, so they DO fly away and/or drop. 
 	//it also mlays a random shatter sound if one is attached.
-	void ShatterAfterCrackingFunction (Rigidbody[] Shards){
+	protected void ShatterAfterCrackingFunction (Rigidbody[] Shards){
 		GetComponent<Collider> ().enabled = false;
 		
 		PlayShatterSound ();

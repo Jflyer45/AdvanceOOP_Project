@@ -26,4 +26,10 @@ public class GameManger : Singleton<GameManger>
     {
 
     }
+
+    // Takes in a posistion of the sound, and then notifies agents.
+    public void LoudSoundNotify(Transform transform)
+    {
+
+    }
 }
