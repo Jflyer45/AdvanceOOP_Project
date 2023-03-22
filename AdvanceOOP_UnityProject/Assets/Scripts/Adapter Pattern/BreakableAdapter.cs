@@ -4,35 +4,26 @@ using UnityEngine;
 
 public class BreakableAdapter : Breakable, IBreakable
 {
-    public void BreakFunction(BreakableVersion version = BreakableVersion.Enhanced)
+    public bool notifySound;
+    public new void BreakFunction()
     {
-        if (version == BreakableVersion.Enhanced)
+        if (notifySound)
         {
             GameManger.Instance.LoudSoundNotify(transform);
         }
-        BreakFunction();
+
+        base.BreakFunction();
         Debug.Log("Test!");
     }
 
-    public void CrackFunction(BreakableVersion version = BreakableVersion.Enhanced)
+    protected override void OnCollisionEnter(Collision other)
     {
-        if (version == BreakableVersion.Enhanced)
-        {
-            GameManger.Instance.LoudSoundNotify(transform);
-        }
-        CrackFunction();
-    }
-
-    /*
-    protected override void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("asdasd");
         if (BreakOnCollision)
         {
 
-            if (other.GetComponent<Rigidbody>() != null)
+            if (other.rigidbody != null)
             {
-                SpeedOfOther = other.GetComponent<Rigidbody>().velocity.magnitude;
+                SpeedOfOther = other.rigidbody.velocity.magnitude;
             }
             if (ThisRigidbody != null)
             {
@@ -42,10 +33,8 @@ public class BreakableAdapter : Breakable, IBreakable
 
             if (CombinedSpeed >= SpeedRequiredToBreak)
             {
-
                 BreakFunction();
             }
         }
     }
-    */
 }

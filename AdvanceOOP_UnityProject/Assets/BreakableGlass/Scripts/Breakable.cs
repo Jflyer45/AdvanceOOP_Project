@@ -150,7 +150,7 @@ public class Breakable : MonoBehaviour {
 	// If the public variable "BreakOnCollision" (above) is set to 'true', then when this object comes 
 	// into contact with a gameobject which has a collider attached, then the 'Break()' function will be called on this object. Behold!
 
-	protected void OnCollisionEnter (Collision other){
+	protected virtual void OnCollisionEnter (Collision other){
 
 		if (BreakOnCollision) {
 		

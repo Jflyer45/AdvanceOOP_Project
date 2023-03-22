@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class GameManger : Singleton<GameManger>
 {
-    // Start is called before the first frame update
+    private IAlarmObserveable alarmStation = new AlarmStation();
     void Start()
     {
-        
+        SubscribeAgentsToAlarmStation();
     }
 
     // Update is called once per frame
@@ -27,9 +27,14 @@ public class GameManger : Singleton<GameManger>
 
     }
 
-    // Takes in a posistion of the sound, and then notifies agents.
+    private void SubscribeAgentsToAlarmStation()
+    {
+        foreach(Guard guard in FindObjectsOfType<Guard>()) { alarmStation.Subscribe(guard); }
+    }
+
+    // Takes in a posistion of the sound, and then notifies all subscribed agents.
     public void LoudSoundNotify(Transform transform)
     {
-
+        alarmStation.Notify(transform);
     }
 }

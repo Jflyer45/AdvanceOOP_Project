@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IBreakable
 {
-    public void BreakFunction(BreakableVersion version);
+    public void BreakFunction();
 
-    public void CrackFunction(BreakableVersion version);
+    //public void CrackFunction(BreakableVersion version);
 }
