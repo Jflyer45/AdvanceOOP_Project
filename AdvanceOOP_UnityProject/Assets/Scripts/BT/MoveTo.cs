@@ -36,7 +36,6 @@ public class MoveTo : Action
 
     public override TaskStatus OnUpdate()
     {
-
         agent.SetDestination(location.position);
 
         if (!agent.pathPending && !agent.isOnOffMeshLink)

@@ -9,11 +9,12 @@ public class Guard : MonoBehaviour, IAlarmSubscriber
 
     public bool heardSound = false;
     public Transform soundLocation;
-    public void AlarmReact(Transform transform)
+    public void AlarmReact(Transform aTransform)
     {
         // When this runs, the agent should go towards the source of the sound transform.
         heardSound = true;
-        soundLocation = transform;
+        soundLocation = aTransform;
+        
     }
 
     // Start is called before the first frame update
