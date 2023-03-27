@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Guard : MonoBehaviour, IAlarmSubscriber
 {
+    [SerializeField] private float speed;
     private NavMeshAgent agent;
 
     public void AlarmReact(Transform transform)
     {
         // When this runs, the agent should go towards the source of the sound transform.
     }
-
-    // TO DO ADD MORE LOGIC
 
     // Start is called before the first frame update
     void Start()

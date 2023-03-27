@@ -6,14 +6,8 @@ using UnityEngine.AI;
 public class MoveTo : Action
 {
     [SerializeField] protected GameObject location;
-    [SerializeField] protected Speed speed;
 
     protected NavMeshAgent agent;
-
-    public enum Speed
-    {
-        Walk, Run
-    }
 
     // Start is called before the first frame update
     public override void OnAwake()
