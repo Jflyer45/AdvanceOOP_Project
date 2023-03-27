@@ -7,9 +7,13 @@ public class Guard : MonoBehaviour, IAlarmSubscriber
     [SerializeField] private float speed;
     private NavMeshAgent agent;
 
+    public bool heardSound = false;
+    public Transform soundLocation;
     public void AlarmReact(Transform transform)
     {
         // When this runs, the agent should go towards the source of the sound transform.
+        heardSound = true;
+        soundLocation = transform;
     }
 
     // Start is called before the first frame update

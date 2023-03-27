@@ -5,7 +5,7 @@ using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine.AI;
 public class MoveTo : Action
 {
-    [SerializeField] protected GameObject location;
+    [SerializeField] protected Transform location;
 
     protected NavMeshAgent agent;
 
@@ -37,16 +37,21 @@ public class MoveTo : Action
     public override TaskStatus OnUpdate()
     {
 
-        agent.SetDestination(location.transform.position);
+        agent.SetDestination(location.position);
 
         if (!agent.pathPending && !agent.isOnOffMeshLink)
         {
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                //aiRoot.IdleAnimation();
+                OnSuccess();
                 return TaskStatus.Success;
             }
         }
         return TaskStatus.Running;
+    }
+
+    public virtual void OnSuccess()
+    {
+
     }
 }
