@@ -10,7 +10,7 @@ public class BreakableAdapter : Breakable, IBreakable
         if (notifySound)
         {
             GameObject go = new GameObject();
-            go.transform.position = this.transform.position;
+            go.transform.position = Replacements[0].transform.position;
             GameManger.Instance.LoudSoundNotify(go.transform);
         }
 
