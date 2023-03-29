@@ -7,10 +7,38 @@ public class JokeClient : MonoBehaviour
 {
     public JokeAPIAdapter jokeAPI;
     public JokeSystem jokeOption;
+    public TMP_Text textObj;
+    public float waitTime;
+    public float jokeAppearTime;
 
     // Start is called before the first frame update
+
+    public void SetUpJoke()
+    {
+        Joke joke = jokeAPI.GetJoke(jokeOption);
+        string textToShow = "";
+        if (joke.type == "onepart")
+        {
+            textToShow = joke.joke;
+        }
+        else
+        {
+            textToShow = joke.setup + "\n \n" + joke.delivery;
+        }
+
+        textObj.text = textToShow;
+    }
+
     void Start()
     {
-        GetComponent<TMP_Text>().text = jokeAPI.GetJoke(jokeOption).type;
+        StartCoroutine("WaitForJoke");
+    }
+
+    IEnumerator WaitForJoke()
+    {
+        yield return new WaitForSeconds(waitTime);
+        SetUpJoke();
+        yield return new WaitForSeconds(jokeAppearTime);
+        textObj.text = "";
     }
 }

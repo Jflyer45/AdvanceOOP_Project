@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d420de262f489a4fb4e494b80b1c6df, type: 3}
   m_Name: TestJoke
   m_EditorClassIdentifier: 
-  type: 0
-  joke: asdfasdf
-  setup: asdfsdfsadf
-  delivery: sdfasdfdsf
+  type: 1
+  joke: 
+  setup: What do you call an angry carrot?
+  delivery: A steamed veggie.

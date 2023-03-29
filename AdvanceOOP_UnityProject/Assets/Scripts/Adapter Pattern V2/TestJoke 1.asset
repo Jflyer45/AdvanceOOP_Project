@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d420de262f489a4fb4e494b80b1c6df, type: 3}
   m_Name: TestJoke 1
   m_EditorClassIdentifier: 
-  type: 1
-  joke: weqweqw
-  setup: wdqwe
-  delivery: qweqwe
+  type: 0
+  joke: 'I used to be afraid of painting, but eventually I brushed it off. '
+  setup: 
+  delivery: 
