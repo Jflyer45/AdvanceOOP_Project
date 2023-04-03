@@ -5,14 +5,13 @@ using TMPro;
 
 public class JokeClient : MonoBehaviour
 {
+    #region
     public JokeAPIAdapter jokeAPI;
     public JokeSystem jokeOption;
     public TMP_Text textObj;
     public float waitTime;
     public float jokeAppearTime;
-
-    // Start is called before the first frame update
-
+    #endregion
     public void SetUpJoke()
     {
         Joke joke = jokeAPI.GetJoke(jokeOption);
